@@ -30,7 +30,7 @@ contract('AuctionContract', function (accounts) {
     pass itemId=0, count=6 as arguments
     HINT:     To make a function call from account 1 use {from: accounts[1]} as an extra argument
     ***********/
-    return auctionInstance.bid(0, 6{ from: accounts[1] })/*<CODE HERE>*/
+    return auctionInstance.bid(0, 6, { from: accounts[1] })/*<CODE HERE>*/
       .then(function (result) {
         /*
         We are testing for a negative condition and hence this particular block will not have executed if our test case was correct. If this part is executed then we throw an error and catch the error to assert false
