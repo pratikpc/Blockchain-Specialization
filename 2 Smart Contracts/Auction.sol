@@ -26,7 +26,7 @@ contract Auction {
 
     //functions
 
-    constructor() public payable{    //constructor
+    function Auction() public payable{    //constructor
 
         //Part 1 Task 1. Initialize beneficiary with address of smart contract’s owner
         //Hint. In the constructor,"msg.sender" is the address of the owner.
@@ -137,7 +137,7 @@ contract Auction {
     }
 
   //Miscellaneous methods: Below methods are used to assist Grading. Please DONOT CHANGE THEM.
-    function getPersonDetails(uint id) public view returns(uint,uint,address){
+    function getPersonDetails(uint id) public constant returns(uint,uint,address){
         return (bidders[id].remainingTokens,bidders[id].personId,bidders[id].addr);
     }
 
